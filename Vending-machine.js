@@ -29,3 +29,6 @@ Rules:
       however you will need to keep track of the amount of money in the machine at anytime.
   8. Change is always given to 2 decimal places ie 7.00.
 */
+
+
+// Solution 
