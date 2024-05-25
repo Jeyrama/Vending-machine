@@ -75,3 +75,5 @@ class VendingMachine {
     return `Vending ${item.name}`
   }
 }
+
+// or
