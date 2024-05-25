@@ -77,3 +77,20 @@ class VendingMachine {
 }
 
 // or
+
+class VendingMachine{
+  constructor(items, cache){
+    this.items = items;
+    this.cache = +cache;
+  }
+  vend(sel, money){  
+    const item = this.items.find(a=>a.code==sel);    
+    if (!item) return `Invalid selection! : Money in vending machine = ${this.cache.toFixed(2)}`;    
+    if (money<item.price) return 'Not enough money!';    
+    if (!item.quantity) return `${item.name}: Out of stock!`;    
+    const change = money - item.price;
+    item.quantity--;
+    this.cache += item.price;
+    return `Vending ${item.name}${change ? ` with ${change.toFixed(2)} change.` : ''}`;
+  }
+}
